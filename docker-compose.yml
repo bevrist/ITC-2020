@@ -1,0 +1,28 @@
+# Docker compose builds and runs multiple docker containers
+# run simply with `docker-compose up`
+
+version: '3'
+
+services:
+  # docker build -t python-app .
+  # docker run -d -p 8000:8000 python-app
+  python-app:
+    build:
+      context: ./GoGoGnomes
+      dockerfile: ./Dockerfile
+    ports:
+      - "8000:8000"
+
+  # docker run -e MYSQL_ROOT_PASSWORD=mypass123 -d mysql:8.0.1
+  db:
+    image: mysql:8.0.1
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: mypass123
+
+  # docker run -d --link my-own-mysql:db -p 8081:80 phpmyadmin/phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8081:80"
+

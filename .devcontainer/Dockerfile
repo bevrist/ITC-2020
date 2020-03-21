@@ -10,8 +10,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 ENV PYTHONUNBUFFERED 1
 
-# The node image includes a non-root user with sudo access. Use the 
-# "remoteUser" property in devcontainer.json to use it. On Linux, update 
+# The node image includes a non-root user with sudo access. Use the
+# "remoteUser" property in devcontainer.json to use it. On Linux, update
 # these values to ensure the container user's UID/GID matches your local values.
 # See https://aka.ms/vscode-remote/containers/non-root-user for details.
 ARG USERNAME=vscode
@@ -36,6 +36,7 @@ RUN apt-get update \
     # Update Python environment based on requirements.txt
     # && pip --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
     # && rm -rf /tmp/pip-tmp \
+    && pip install --no-cache-dir django \
     #
     # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
     && groupadd --gid $USER_GID $USERNAME \
