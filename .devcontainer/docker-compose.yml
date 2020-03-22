@@ -34,3 +34,5 @@ services:
     image: phpmyadmin/phpmyadmin
     ports:
       - "8081:80"
+    links:
+      - db

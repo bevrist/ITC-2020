@@ -12,6 +12,8 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - "8000:8000"
+    links:
+      - db
 
   # docker run -e MYSQL_ROOT_PASSWORD=mypass123 -d mysql:8.0.1
   db:
@@ -25,4 +27,5 @@ services:
     image: phpmyadmin/phpmyadmin
     ports:
       - "8081:80"
-
+    links:
+      - db

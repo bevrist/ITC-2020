@@ -5,7 +5,7 @@
 Install Docker: https://docs.docker.com/install/  
 to launch simply run `docker-compose build` & `docker-compose up`  
 visit http://localhost:8000/homepage for the django site and http://localhost:8081 for PhpMyAdmin  
-PhpMyAdmin username is `root` and password is `mypass123` --- `#FIXME: remove this at some point`  
+MySQL username is `root` and password is `mypass123` --- `#FIXME: remove this at some point`  
 
 
 --- 
