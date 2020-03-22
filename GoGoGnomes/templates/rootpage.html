@@ -1,13 +1,29 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+    
+    
     <head>
-        <meta charset='utf-8'>
         <title>Homepage</title>
         <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
     </head>
     <body>
-        <h1>Welcome to our homepage!</h1>
-        <p>Home of the Go Go Gnomes ITC 2020 Web App!</p>
+
+    <div id="container">
+        <div id="main">
+            <h1><center>Welcome to Go Go Gnomes Holiday Card Creation!</center></h1>
+            <br>
+            <p>Home of the Go Go Gnomes ITC 2020 Web App!</p>
+        </div>
+
+        <p class="home-image"> <img src="{% static 'images/happy-holidays.jpg' %}" alt="image" height="800" width="800"> </p>
+    </div>
+    
+    <footer id="footer">
+        <p>Check out our github at: <a href="https://github.com/bevrist/ITC-2020">Github</a></p>
+    </footer>
+    
     </body>
+
+
 </html>
