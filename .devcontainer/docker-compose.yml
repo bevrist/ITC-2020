@@ -21,7 +21,9 @@ services:
       - "8000:8000"
 
   db:
-    image: mysql
+    build:
+      context: ../mySQL
+      dockerfile: ./Dockerfile
     restart: unless-stopped
     ports:
       - 5432:5432

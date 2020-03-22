@@ -1,4 +1,13 @@
 FROM mysql:8.0.1
 
-#update container & install dependencies
-RUN mysql -u root -p'mypass123' -e "select * from user";
+#install nc for watching for db uptime
+RUN apt-get update \
+    && apt-get install netcat -y \
+    && rm -rf /var/lib/apt/lists/*
+
+# copy setup script and execute in beginning of mySQL entrypoint script
+COPY setup-mySQL.sh ./
+RUN chmod 700 setup-mySQL.sh \
+    && sed '1a ./setup-mySQL.sh &' entrypoint.sh > entrypoint-mod.sh \
+    && cp entrypoint-mod.sh entrypoint.sh \
+    && rm entrypoint-mod.sh
