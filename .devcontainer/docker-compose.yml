@@ -15,10 +15,10 @@ services:
       - ..:/workspace:cached
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
-    links:
-      - db
     ports:
       - "8000:8000"
+    links:
+      - db
 
   db:
     build:
@@ -26,9 +26,9 @@ services:
       dockerfile: ./Dockerfile
     restart: unless-stopped
     ports:
-      - 5432:5432
       - 3306:3306
       - 33060:33060
+      - 5432:5432
     environment:
       MYSQL_ROOT_PASSWORD: mypass123
 
