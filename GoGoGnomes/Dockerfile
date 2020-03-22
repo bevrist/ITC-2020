@@ -9,12 +9,14 @@ WORKDIR /app
 
 #update container & install dependencies
 RUN apt-get update && apt-get -y upgrade \
+    && apt-get install netcat -y \
     && pip install --no-cache-dir -r requirements.txt \
     && apt-get autoremove -y && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-#the command the container will run at launch
-CMD python manage.py runserver 0.0.0.0:8000
+#make entrypoint.sh the new command run at startup
+RUN chmod 700 entrypoint.sh
+CMD ./entrypoint.sh
 
 #this does nothing, just here to let user know this port is meant to be used
 EXPOSE 8000

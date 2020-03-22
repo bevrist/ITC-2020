@@ -17,7 +17,9 @@ services:
 
   # docker run -e MYSQL_ROOT_PASSWORD=mypass123 -d mysql:8.0.1
   db:
-    image: mysql:8.0.1
+    build:
+      context: ./mySQL
+      dockerfile: ./Dockerfile
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: mypass123
