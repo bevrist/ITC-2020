@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Upload an Image</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/upload.css' %}">
+    </head>
+
+    <body>
+        <div id=container>
+            <div id=spacer>
+            </div>
+            <div id=main>
+                <h1>Upload an image for your design!</h1>
+            </div> 
+            <div id="selection-bar">
+                <div><a class="selection-bar-link" href="http://localhost:8000">Home Page</a></div><div>About Us</div><div>Samples</div>
+            </div>   
+            <div id="content">
+                <div id="image-upload">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <input type="file" name="img">
+                        <button type="submit">Upload File</button>
+                    </form>
+                </div>
+            </div>   
+        </div>
+
+        <footer id="footer">
+            <p>
+                <a href="https://github.com/bevrist/ITC-2020"><input type="image" src="{% static 'images/GitHub-Mark-32px.png' %}"/></a>
+            </p>
+        </footer>
+    </body>
+
+</html>

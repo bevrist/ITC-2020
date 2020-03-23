@@ -10,29 +10,24 @@ html, body {
 #container {
     min-height: 100%;
     background-color: rgb(164, 219, 169);
-}
-
-#main {
-    overflow: auto;
-    padding-bottom: 50px;
-    padding-top: 10px;
-    text-align: center;
-    background-color: rgb(55, 76, 87);
-    color: white;
     text-align: center;
 }
 
 #spacer {
-    padding-top: 50px;
     background-color: rgb(164, 219, 169);
+    padding-top: 50px;
 }
 
-#content {
-    overflow: auto;
+#main {
+    background-color: white;
     margin-left: 75px;
     margin-right: 75px;
-    background: center;
-    background-color: white;
+}
+
+#main h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-style: oblique;
 }
 
 #selection-bar {
@@ -53,53 +48,36 @@ html, body {
     color: white;
 }
 
-#samples {
+.selection-bar-link {
+    color: white;
+}
+
+.selection-bar-link:hover {
+    color: grey;
+}
+
+#content {
+    text-align: center;
+    background-color: white;
     margin-left: 75px;
     margin-right: 75px;
-    margin-bottom: 75px;
-    padding-bottom: 300px;
-    background-color: white;
+    padding: 100px;
+}
+
+#image-upload {
+    border: 2px solid black;
+    padding: 10px;
 }
 
 #footer {
     background-color: rgb(55, 76, 87);
     position: relative;
     height: 50px;
-    padding: 25px;
     margin-top: -50px;
+    padding: 25px;
     clear: both;
 }
 
-
-.home-image {
-    text-align: center;
-    background-color: rgb(9, 39, 65);
-}
-
-.main-title {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 50px;
-    font-style: oblique;
-    font-weight: 700;
-}
-
-.sub-title {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 25px;
-    font-style: oblique;
-    font-weight: 100;
-}
-
-.link {
-    color: white;
-}
-
-.link:hover {
-    color: grey;
-}
-
-footer p {
+#footer p {
     text-align: center;
 }
