@@ -1,4 +1,8 @@
-#footer > div {
-    text-align: center;
-    padding: 25px;
+footer {
+    background:#343a40;
+    padding:30px;
+}
+
+.copy {
+    padding-top: 30px;
 }
