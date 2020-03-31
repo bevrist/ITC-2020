@@ -12,4 +12,4 @@ RUN chmod 700 setup-mySQL.sh \
     && cp entrypoint-mod.sh entrypoint.sh \
     && rm entrypoint-mod.sh
 
-CMD ["--secure-file-priv=Images"]
+CMD ["--secure-file-priv=images"]

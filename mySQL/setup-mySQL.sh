@@ -23,8 +23,8 @@ INSERT INTO gnomedb.Holidays (HolidayName, HolidayID) VALUES
 CREATE TABLE SampleCards (image_id INT(10) auto_increment, Image MEDIUMBLOB NOT NULL, Image_Filename VARCHAR(50) NOT NULL, PRIMARY KEY(image_id));
 
 INSERT INTO gnomedb.SampleCards(Image, Image_Filename) VALUES
-    (LOAD_FILE('/Images/4th-July/july1.png'), 'july1.png'),
-    (LOAD_FILE('/Images/4th-July/july2.png'), 'july2.png');
+    (LOAD_FILE('/images/BlankChristmas_1.jpg'), 'BlankChristmas_1.jpg'),
+    (LOAD_FILE('/images/BlankChristmas_2.jpg'), 'BlankChristmas_2.jpg');
 "
 
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
