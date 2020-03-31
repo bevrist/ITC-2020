@@ -5,9 +5,11 @@ RUN apt-get update \
     && apt-get install netcat -y \
     && rm -rf /var/lib/apt/lists/*
 
-# copy setup script and execute in beginning of mySQL entrypoint script
-COPY setup-mySQL.sh ./
+# copy files and execute setup-mySQL.sh in beginning of mySQL entrypoint script
+COPY ./ ./
 RUN chmod 700 setup-mySQL.sh \
     && sed '1a ./setup-mySQL.sh &' entrypoint.sh > entrypoint-mod.sh \
     && cp entrypoint-mod.sh entrypoint.sh \
     && rm entrypoint-mod.sh
+
+CMD ["--secure-file-priv=Images"]
