@@ -25,7 +25,7 @@ CREATE TABLE 'SampleCards` (
   `Image` BLOB NULL,
   PRIMARY KEY (`image_id`));
 
-Insert Into gnomedb.SampleCard Values("1", 'C:/Users/Jordan/Desktop/ITC-2020/HolidayCards/FamilyCards/BlankNewYears_1.jpg'), 
+Insert Into gnomedb.SampleCards Values("1", 'C:/Users/Jordan/Desktop/ITC-2020/HolidayCards/FamilyCards/BlankNewYears_1.jpg'), 
                                      ("2", 'C:/Users/Jordan/Desktop/ITC-2020/HolidayCards/FamilyCards/BlankNewYears_2.jpg'),
                                      ("3", 'C:/Users/Jordan/Desktop/ITC-2020/HolidayCards/FamilyCards/BlankNewYears_3.jpg'),
                                      ("4", 'C:/Users/Jordan/Desktop/ITC-2020/HolidayCards/FamilyCards/BlankNewYears_4.jpg'),
