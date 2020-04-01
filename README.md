@@ -4,7 +4,7 @@
 
 Install Docker: https://docs.docker.com/install/  
 to launch simply run `docker-compose down; docker-compose build; docker-compose up`  
-visit http://localhost:8000/homepage for the django site and http://localhost:8081 for PhpMyAdmin  
+visit http://localhost:8000/ for the django site and http://localhost:8081 for PhpMyAdmin  
 MySQL username is `root` and password is `mypass123` --- `#FIXME: remove this at some point`  
 
 
@@ -29,7 +29,7 @@ MySQL username is `root` and password is `mypass123` --- `#FIXME: remove this at
 
 
 ## To run locally:
-   Type "python manage.py runserver" into Powershell<br>
-   Access the page on - localhost:8000/homepage
+   Type "python manage.py runserver 0.0.0.0:8000" into Powershell<br>
+   Access the page on - localhost:8000/
 
 
