@@ -30,6 +30,6 @@ MySQL username is `root` and password is `mypass123` --- `#FIXME: remove this at
 
 ## To run locally:
    Type "python manage.py runserver 0.0.0.0:8000" into Powershell<br>
-   Access the page on - localhost:8000/homepage
+   Access the page on - localhost:8000/
 
 
