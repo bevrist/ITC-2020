@@ -8,7 +8,7 @@ RUN apt-get update \
 # copy files and execute setup-mySQL.sh in beginning of mySQL entrypoint script
 COPY ./ ./
 RUN chmod 700 setup-mySQL.sh \
-    && sed -i 's/^M$//g' setup-mySQL.sh \
+    && sed -i 's/\r$//g' setup-mySQL.sh \
     && sed '1a ./setup-mySQL.sh &' entrypoint.sh > entrypoint-mod.sh \
     && cp entrypoint-mod.sh entrypoint.sh \
     && rm entrypoint-mod.sh
