@@ -1,4 +1,10 @@
 #!/bin/bash
+if [ -f "sql-setup-success.txt" ]; then
+    echo "SQL already initialized. skipping setup..."
+    exit
+fi
+touch sql-setup-success.txt
+
 SQL_PASSWORD='mypass123' #FIXME use this
 
 # wait for db to initialize before running sql commands
@@ -124,3 +130,4 @@ echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 --- SQL READY ---
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
+touch sql-setup-success.txt
