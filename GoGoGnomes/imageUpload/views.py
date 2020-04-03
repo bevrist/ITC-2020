@@ -51,3 +51,9 @@ def imageUpload(request):
 def getImage():
     img = Samplecards.objects.get(image_id=1)
     return img
+
+def upload(request):
+    return render(request, 'uploadpage.html')
+
+def index(request):
+    return render(render, 'rootpage2.html')
