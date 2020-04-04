@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from PIL import Image, ImageOps
-import io
+import io, os
 
 from .models import Samplecards, Holidays
 
@@ -41,6 +41,8 @@ def imageUpload(request):
 
         # itr is used for saving each new sample
         itr = 0
+
+        os.system('rm ./media/*')
 
         # Iterate through all of the samples of the selected holiday
         for sample in Samplecards.objects.filter(holidayid=holiday_id):
