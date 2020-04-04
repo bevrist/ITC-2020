@@ -1,35 +1,69 @@
-# ITC-2020
+# ITC-2020 - Web Applications Development - GoGoGnomes - Documentation
 
-# Running Instructions
+## TODO:
+1. change the python app to listen on port 80
+1. remove phpmyadmin container from prod
+1. finish this README
+1. Remove the TODO section
 
-Install Docker: https://docs.docker.com/install/  
-to launch simply run `docker-compose down; docker-compose build; docker-compose up`  
-visit http://localhost:8000/ for the django site and http://localhost:8081 for PhpMyAdmin  
-MySQL username is `root` and password is `mypass123` --- `#FIXME: remove this at some point`  
-
-
---- 
+---
+---
 ---
 
-# Dev Instructions:
-## for VsCode users:
-- open the remote explorer tab to the far left of vscode, 
-- then click the plus symbol next to the 'containers' dropdown, and select "open current folder in container"
-- once the docker container has been deployed, type `ctrl+~` symbols to open your terminal in vscode
-- then in the GoGoGnomes dir run "`python manage.py runserver 0.0.0.0:8000`" in the terminal 
-- you may now access the django app from `localhost:8000/homepage/` and PhpMyAdmin from `localhost:8081` in your local web browser, you may also open your vscode extensions tab to install extensions into your dev container
-- no need to follow below instructions, all prerequisites are installed according to the ./GoGoGnomes/requirements.txt file
-- In the event you need to open more ports, in the remote explorer tab click the plus symbol next to 'forwarded ports' and open any requested ports to your local machine
---- 
+# Running Instructions
+**Dependencies:** Docker community edition & Docker-compose  
+> Install docker and docker-compose by following the instructions for your distribution here: https://docs.docker.com/install/  
 
-## Need to have installed: 
-   Python 3.8+  
-   ~~Django 3.0.4+~~  
-   `pip install -r ./GoGoGnomes/requirements.txt`
+to launch simply run `docker-compose build` & `docker-compose up` from the project directory.  
+ensure port 80 is accessible on the host machine.  
 
 
-## To run locally:
-   Type "python manage.py runserver 0.0.0.0:8000" into Powershell<br>
-   Access the page on - localhost:8000/
+<!-- DOCUMENTATION INSTRUCTIONS!
+Documentation (10 points)
+README file that describes the architecture/design of the systems, enumerate and explain
+features of the system, show how different programs interact. If you implement new features,
+clearly state them. This document also explains the database design and shows how tables are
+related. Please follow this format for submission:
+Web Applications Development – Team Name - Documentation
+Application Deliverables and Documentation must be submitted by Sunday, April 5th @
+11:59PM PST via Google Form. -->
 
+# Documentation
+## Docker/Containerization
+Docker (with docker-compose) is used for containerizing all of the needed software for the site, namely the python(Django) web app and the mySQL database. This was chosen because it allows for us to quickly iterate on our code and run on multiple machines with minimal friction.  
+We use docker-compose to orchestrate the software containers, creating a private network and limiting access to the containers through the docker network, with this setup the database is inaccessible to all (including the host machine) with the exception being the web application, reducing attack surface and increasing security.
 
+## Database
+### Table Relations: 
+Holidays        |    | SampleCards 
+----------------|----| --------------
+HolidayName (PK)|    | Image_ID (PK)
+HolidayID       | <- | HolidayID (FK)
+|               |    | Image
+|               |    | Image_Filename
+|               |    | user_img_pos_x
+|               |    | user_img_pos_y
+|               |    | resize_img_len
+|               |    | resize_img_wid
+
+### Table Entities:
+`Holidays Table` |                                       |
+-----------------|---------------------------------------|
+HolidayName (PK) | String identifying holiday names      |
+HolidayID        | Integer identifier for holiday names  |
+
+---
+
+`SampleCards Table`|                                         |
+-------------------|-----------------------------------------|
+Image_ID (PK)  | Auto_Incrementing Integer identifier for sample Images |
+HolidayID (FK) | Foreign Key pointing to `Holidays` table |
+Image          | Blob holding raw image data |
+Image_Filename | String for filename |
+user_img_pos_x | Integer for X coordinate of template position |
+user_img_pos_y | Integer for Y coordinate of template position |
+resize_img_len | Integer for template image length in pixels |
+resize_img_wid | Integer for template image width in pixels |
+
+## Code:
+TODO plz
