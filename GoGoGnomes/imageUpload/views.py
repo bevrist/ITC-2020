@@ -48,12 +48,11 @@ def imageUpload(request):
             print(holidayID)
             print("DONE")
 
-            uploaded_image = request.FILES['img']
-
+            uploaded_image = request.FILES['img']                       
             foreground = Image.open(uploaded_image).convert("RGBA")
+            resizedForeground = foreground.resize((sample.resize_img_len, sample.resize_img_wid))
             background = Image.open(theImage).convert("RGBA")
-
-            background.paste(foreground, (440, 190), foreground)
+            background.paste(resizedForeground, (sample.user_img_pos_x, sample.user_img_pos_y), resizedForeground)
             print(itr)
             background.save(("{0}"+str(itr)+".png").format("./media/image"))
             itr += 1

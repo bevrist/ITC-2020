@@ -22,7 +22,11 @@ class Samplecards(models.Model):
     image_id = models.AutoField(primary_key=True)
     image = models.TextField(db_column='Image')  # Field name made lowercase.
     image_filename = models.CharField(db_column='Image_Filename', max_length=50)  # Field name made lowercase.
-
+    user_img_pos_x = models.IntegerField(blank=True, null=True)
+    user_img_pos_y = models.IntegerField(blank=True, null=True)
+    resize_img_len = models.IntegerField(blank=True, null=True)
+    resize_img_wid = models.IntegerField(blank=True, null=True)
+    
     class Meta:
         managed = False
         db_table = 'SampleCards'
