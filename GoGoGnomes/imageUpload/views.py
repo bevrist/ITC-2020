@@ -58,8 +58,8 @@ def imageUpload(request):
             background.save(("{0}"+str(itr)+".png").format("./media/image"))
             itr += 1
 
-        fs = FileSystemStorage()
-        fs.save(uploaded_image.name, uploaded_image)   
+        #fs = FileSystemStorage()
+        #fs.save(uploaded_image.name, uploaded_image)   
   
     return render(request, 'uploadpage.html')
 
