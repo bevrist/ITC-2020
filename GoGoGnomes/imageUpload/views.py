@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
-from PIL import Image
+from PIL import Image, ImageOps
 import base64
 import io
 
@@ -51,8 +51,9 @@ def imageUpload(request):
             uploaded_image = request.FILES['img']                       
             foreground = Image.open(uploaded_image).convert("RGBA")
             resizedForeground = foreground.resize((sample.resize_img_len, sample.resize_img_wid))
+            img_with_border = ImageOps.expand(resizedForeground,border=10,fill='white')
             background = Image.open(theImage).convert("RGBA")
-            background.paste(resizedForeground, (sample.user_img_pos_x, sample.user_img_pos_y), resizedForeground)
+            background.paste(img_with_border, (sample.user_img_pos_x, sample.user_img_pos_y), img_with_border)
             print(itr)
             background.save(("{0}"+str(itr)+".png").format("./media/image"))
             itr += 1
