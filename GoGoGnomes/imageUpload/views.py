@@ -53,8 +53,8 @@ def imageUpload(request):
             # Opens and formats user uploaded image using Pillow to be combined with sample background            
             foreground = Image.open(uploaded_image).convert("RGBA").resize((sample.resize_img_len, sample.resize_img_wid))
             
-            # Adds a styling border on the uploaded image
-            img_with_border = ImageOps.expand(foreground,border=10,fill='white')
+            # Adds a styling border on the uploaded image and rotates if necessary
+            img_with_border = ImageOps.expand(foreground,border=10,fill=sample.border_color).rotate(sample.rotation, expand=True)
             
             # Opens, formats, combines, and saves the background image combined with the user uploaded image
             background = Image.open(theImage).convert("RGBA")

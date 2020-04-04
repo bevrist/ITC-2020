@@ -26,6 +26,8 @@ class Samplecards(models.Model):
     user_img_pos_y = models.IntegerField(blank=True, null=True)
     resize_img_len = models.IntegerField(blank=True, null=True)
     resize_img_wid = models.IntegerField(blank=True, null=True)
+    rotation = models.IntegerField(blank=True, null=True)
+    border_color = models.CharField(max_length=50)
     
     class Meta:
         managed = False
