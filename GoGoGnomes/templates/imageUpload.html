@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<title>Homepage</title>
+	<title>Card Results</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
@@ -61,7 +61,20 @@
 			<p class="text-light copy">Copyright © GoGoGnomes 2020</p>
 		</div>
 	</footer>
-
+	
+    <!--Lightbox control script-->
+	<script>
+		function($){
+		$(document).ready(function(){
+		$('.lightbox').fancybox();
+		});
+		})(jQuery)
+	</script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 </body>
 
 </html>
