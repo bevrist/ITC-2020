@@ -66,4 +66,5 @@ resize_img_len | Integer for template image length in pixels |
 resize_img_wid | Integer for template image width in pixels |
 
 ## Code:
-TODO plz
+### Django
+Django is a free and open source python-based web framework that takes a lot of the hassle out of web app development, allowing for simple and fluid code development as well as rapid testing and prototyping. Django is well fleshed with featues that make for simple feature implementation such as user authentication, RSS feeds, and so much more. Along with it plentiful feature set, it is shockingly simple to create a secure site by using Django's built in protection against common vulnerabilities such as SQL Inejection, Cross-Site Scripting, Cross-Site Request Forgery, and Click-highjacking.
