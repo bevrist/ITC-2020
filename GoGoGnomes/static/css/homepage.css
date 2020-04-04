@@ -1,8 +1,9 @@
-footer {
-    background:#343a40;
-    padding:30px;
+footer {	
+    background:#343a40;  
+    padding-top: 20px;
+	padding-bottom: 10px;
 }
 
 .copy {
-    padding-top: 30px;
+    padding-top: 5px;
 }

@@ -1,4 +1,4 @@
-​​{% load static %}
+​​​{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -26,14 +26,15 @@
 			</li>
 		</ul>
 	</nav>
-	
-	<!--Image Gallery Light Box-->
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col text-center">
-				<div style="margin-bottom:50px; margin-top:50px">
-					<h3>Your photos are ready!</h3>
-					<h4> Here are your amazing options for your holiday cards!<h4>
+	<div id="page-container">
+		<div id="content-wrap">
+			<!--Image Gallery Light Box-->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col text-center">
+						<div style="margin-bottom:50px; margin-top:50px">
+							<h3>Your photos are ready!</h3>
+							<h4> Here are your amazing options for your holiday cards!<h4>
 					<a data-fancybox="gallery" class="lightbox" href="../media/image0.png" data-caption="Caption for single image">
 						<img src="../media/image0.png" alt="" width="500" height="200" hspace="10" vspace="10" class="rounded"/>
 					</a>
@@ -53,9 +54,9 @@
 			</div>
 		</div>
 	</div>
-	
+</div>
 	<!--Footer-->
-	<footer>
+	<footer class="footer fixed-bottom">
 		<div class="col text-center">
 			<a href="https://github.com/bevrist/ITC-2020" class="fa fa-github" style="color:#FFFFFF; font-size:150px; text-decoration: none;"></a>
 			<p class="text-light copy">Copyright © GoGoGnomes 2020</p>
@@ -75,6 +76,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</div>
 </body>
 
 </html>
