@@ -1,45 +1,76 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-
-<head>
-	<title>Help</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
-	<!--Navigation Bar-->
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-		<!-- Brand/logo --> <a class="navbar-brand" href="#">GoGoGnomes ITC 2020</a>
-		<!-- Links -->
-		<ul class="navbar-nav">
-			<li class="nav-item"> <a class="nav-link" href="{% url 'index' %}">Home</a>
-			</li>
-			<li class="nav-item"> <a class="nav-link" href="{% url 'upload' %}">Create</a>
-			</li>
-			<li class="nav-item"> <a class="nav-link" href="#">Help</a>
-			</li>
-		</ul>
-	</nav>
-	
-	<!--Footer-->
-	<footer class="footer fixed-bottom">
-		<div class="col text-center">
-			<a href="https://github.com/bevrist/ITC-2020" class="fa fa-github" style="color:#FFFFFF; font-size:150px; text-decoration: none;"></a>
-			<p class="text-light copy">Copyright © GoGoGnomes 2020</p>
-		</div>
-	</footer>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-</div>
-</body>
-
+   <head>
+      <title>Help</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+      <!--Navigation Bar-->
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+         <!-- Brand/logo --> <a class="navbar-brand" href="{% url 'index' %}">GoGoGnomes ITC 2020</a>
+         <!-- Links -->
+         <ul class="navbar-nav">
+            <li class="nav-item"> <a class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link" href="{% url 'upload' %}">Create</a>
+            </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Help</a>
+            </li>
+         </ul>
+      </nav>
+      <div class="container-fluid" style="margin-top: 80px; text-align:center;">
+         <h1>Welcome to the help page</h1>
+         <div class="row" style="margin-top: 60px;">
+            <div class="col-sm-4" style=" text-align:right;">
+               <h3>How to create cards:</h3>
+            </div>
+            <div class="col-sm-4" style=" text-align:left;">
+               <P>Simply click the the link at the top of the page called create. Once you are on the create page, click on the dropbox near the top of he page to
+                  select a holiday.CLick the browse button next and a window will appear to allow the user to select an image from their compoter. Once the holiday 
+                  and user photo has been selected has been selected, click the submit button. Your cards will be created automatically. Download buttons will apear 
+                  below the cards to save the images.
+               </p>
+            </div>
+         </div>
+         <div class="row" style="margin-top: 60px;">
+            <div class="col-sm-4" style=" text-align:right;">
+               <h3>Why are images distored?</h3>
+            </div>
+            <div class="col-sm-4" style=" text-align:left;">
+               <P>User images are automatically resized to fit the card templates. Using larger images is recommended. Large image sizes can be reduced while still 
+                  retaining the quality, however the same is not true for smaller images. For best results, we recommend using an image size of at least 950x530 or 
+                  larger where the width is greater than the height.
+               </p>
+            </div>
+         </div>
+         <div class="row" style="margin-top: 60px;">
+            <div class="col-sm-4" style=" text-align:right;">
+               <h3>How to save cards:</h3>
+            </div>
+            <div class="col-sm-4" style=" text-align:left;">
+               <P>After the cards have been created, there will be a download button under each card. CLick the download button to automatically save the image to your device. 
+                  A second option would be to right click on the picture and select save image.
+               </p>
+            </div>
+         </div>
+      </div>
+      <!--Footer-->
+      <footer class="footer fixed-bottom">
+         <div class="col text-center">
+            <a href="https://github.com/bevrist/ITC-2020" class="fa fa-github" style="color:#FFFFFF; font-size:50px; text-decoration: none;"></a>
+            <p class="text-light copy">Copyright © GoGoGnomes 2020</p>
+         </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+      </div>
+   </body>
 </html>
