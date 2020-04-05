@@ -3,6 +3,7 @@
 ## TODO:
 1. change the python app to listen on port 80
 1. remove phpmyadmin container from prod
+1. disable django debug mode
 1. finish this README
 1. Remove the TODO section
 

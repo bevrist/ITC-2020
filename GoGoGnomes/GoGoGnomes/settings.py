@@ -25,7 +25,7 @@ SECRET_KEY = 'k7n66xsvim!47%7lh2^c4m9xoh8%v=+c=59vyxio1tnmwh&dop'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["itc.ciso-csusb.org", "127.0.0.1", "localhost"]
 
 STATICFILES_DIRS = [
     "/workspace/GoGoGnomes/static",

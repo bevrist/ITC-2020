@@ -5,4 +5,4 @@ until nc -z -w60 db 3306; do sleep 1; done
 sleep 2
 
 echo "launching..."
-python manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0.0.0.0:80

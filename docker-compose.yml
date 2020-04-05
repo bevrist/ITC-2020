@@ -11,7 +11,7 @@ services:
       context: ./GoGoGnomes
       dockerfile: ./Dockerfile
     ports:
-      - "8000:8000"
+      - "80:80"
     links:
       - db
     restart: unless-stopped
@@ -26,10 +26,10 @@ services:
       MYSQL_ROOT_PASSWORD: mypass123
 
   # docker run -d --link my-own-mysql:db -p 8081:80 phpmyadmin/phpmyadmin
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - "8081:80"
-    links:
-      - db
-    restart: unless-stopped
+  # phpmyadmin:
+  #   image: phpmyadmin/phpmyadmin
+  #   ports:
+  #     - "8081:80"
+  #   links:
+  #     - db
+  #   restart: unless-stopped
