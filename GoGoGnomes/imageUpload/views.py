@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseServerError
 from PIL import Image, ImageOps
 import io, os
 
@@ -10,6 +11,7 @@ def imageUpload(request):
         selection = request.POST['selection']
 
         # Assign holiday id for database calls depending on which holiday is selected
+        # Throws an error when the user doesn't select a holiday
         if selection == "Christmas":
             holiday_id = 12
         elif selection == "Thanksgiving":
@@ -36,12 +38,13 @@ def imageUpload(request):
             holiday_id = 13
         elif selection == "Diwali":
             holiday_id = 9
-        else:
-            None
+        elif selection == "null":
+            return HttpResponseServerError('<h1>Error HTTP 500 - Please select a holiday</h1>')
 
         # itr is used for saving each new sample
         itr = 0
 
+        # Clears the media folder before combining images to ensure old creations aren't used
         os.system('rm ./media/*')
 
         # Iterate through all of the samples of the selected holiday
@@ -49,8 +52,11 @@ def imageUpload(request):
             # Grab the image bytes
             theImage = io.BytesIO(sample.image)
 
-            # Grab the user upload from POST request
-            uploaded_image = request.FILES['img']   
+            # Grab the user upload from POST request - Throw error if file not selected
+            if 'img' in request.FILES:
+                uploaded_image = request.FILES['img']
+            else:
+                return HttpResponseServerError('<h1>Error HTTP 500 - Please select and image to upload</h1>')
 
             # Opens and formats user uploaded image using Pillow to be combined with sample background            
             foreground = Image.open(uploaded_image).convert("RGBA").resize((sample.resize_img_len, sample.resize_img_wid))
