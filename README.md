@@ -64,6 +64,9 @@ user_img_pos_x | Integer for X coordinate of template position |
 user_img_pos_y | Integer for Y coordinate of template position |
 resize_img_len | Integer for template image length in pixels |
 resize_img_wid | Integer for template image width in pixels |
+rotation       | Integer for rotating user image in degrees |
+border_color    | String for image border color |
+
 
 ## Code:
 ### Django
