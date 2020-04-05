@@ -31,8 +31,7 @@
 
 	<div class="container" style="margin-top:80px">
 		<h2>File Upload</h2>
-		<p>To begin, upload the photo you would like to use with you card</p>
-		
+		<p>To begin, select a holiday from the drop-down menu below. Next, select your photo by pressing the browse button and then press submit.</p>
 		<form method="post" action="/imageUpload/" enctype="multipart/form-data">
 			{% csrf_token %}
 
@@ -53,9 +52,9 @@
 				<option value="Kwanzaa">Kwanzaa</option>
 				<option value="Diwali">Diwali</option>
 			</select>
-
-			<p>Choose file:</p>
-			<div class="custom-file mb-3">
+			
+			<label for="uploadbox" style="margin-top:30px">Select a photo:</label>
+			<div class="custom-file mb-3" id="uploadbox" >			
 				<input type="file" class="custom-file-input" id="customFile" name="img">
 				<label class="custom-file-label" for="customFile">Choose file</label>
 			</div>
