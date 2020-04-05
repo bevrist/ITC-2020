@@ -80,7 +80,7 @@ Django's framework breaks each different page within the site into subsections c
 ---
 
 ### Bootstrap
-
+Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. A major focus of the framework is responsive, mobile-first front-end web development. Bootstrap is easy to use and speeds up the process of development by offering extensive prebuilt components, and powerful plugins built on jQuery.
 
 ---
 
