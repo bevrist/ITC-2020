@@ -1,16 +1,5 @@
 # ITC-2020 - Web Applications Development - GoGoGnomes - Documentation
 
-## TODO:
-1. change the python app to listen on port 80
-1. remove phpmyadmin container from prod
-1. disable django debug mode
-1. finish this README
-1. Remove the TODO section
-
----
----
----
-
 # Running Instructions
 **Dependencies:** Docker community edition & Docker-compose  
 > Install docker and docker-compose by following the instructions for your distribution here: https://docs.docker.com/install/  
