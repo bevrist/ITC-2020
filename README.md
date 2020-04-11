@@ -75,6 +75,6 @@ Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. A maj
 ---
 
 ### MySQL
-We used the MySQL extension inside of Virtual Studio Code to create and run and the database. We created two tables, one for the holidays and an ID to make them easier to search for within the database, and a second table to hold all of the images that we stored in BLOB format. BLOB format is a binary large object that can hold the variable amount, making it perfect for image files. Because of the size of the database we thought that BLOB format would be the best way to store the images, without taking up too much space and slowing down the database.
+We used MySQL for our database. We created two tables, one for the holidays and an ID to make them easier to search for within the database, and a second table to hold all of the images that we stored in BLOB format. BLOB format is a binary large object that can hold the variable amount, making it perfect for image files. Because of the size of the database we thought that BLOB format would be the best way to store the images because his approach means that images can be changed/added/removed without having to update multiple files and worry about broken links.
 
 ---
